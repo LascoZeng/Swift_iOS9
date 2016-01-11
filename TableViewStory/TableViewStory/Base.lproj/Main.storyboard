@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CBd-T9-cSb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Attraction Table View Controller-->
+        <scene sceneID="Vni-lh-H3X">
+            <objects>
+                <tableViewController id="CBd-T9-cSb" customClass="AttractionTableViewController" customModule="TableViewStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7gj-Kz-XZz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttractionTableCell" id="y4L-uD-m2G" customClass="AttractionTableViewCell" customModule="TableViewStory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y4L-uD-m2G" id="y1A-YC-Fgd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-et-EJe">
+                                            <rect key="frame" x="19" y="0.0" width="132" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="132" id="yxD-mF-tFp"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0O-SB-IAh">
+                                            <rect key="frame" x="159" y="11" width="242" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="242" id="E8Y-RO-Nid"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="djQ-et-EJe" firstAttribute="leading" secondItem="y1A-YC-Fgd" secondAttribute="leadingMargin" constant="11" id="3mt-Pu-nvp"/>
+                                        <constraint firstItem="djQ-et-EJe" firstAttribute="top" secondItem="y1A-YC-Fgd" secondAttribute="top" id="HfL-ZY-pUf"/>
+                                        <constraint firstAttribute="bottom" secondItem="djQ-et-EJe" secondAttribute="bottom" id="dbb-cr-fss"/>
+                                        <constraint firstItem="n0O-SB-IAh" firstAttribute="leading" secondItem="djQ-et-EJe" secondAttribute="trailing" constant="8" symbolic="YES" id="fXL-On-H7j"/>
+                                        <constraint firstItem="n0O-SB-IAh" firstAttribute="centerY" secondItem="djQ-et-EJe" secondAttribute="centerY" id="uFr-Yw-ulk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="attractionImage" destination="djQ-et-EJe" id="gjd-He-cO5"/>
+                                    <outlet property="attractionLabel" destination="n0O-SB-IAh" id="Chd-cK-D67"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CBd-T9-cSb" id="OWE-ES-zcf"/>
+                            <outlet property="delegate" destination="CBd-T9-cSb" id="bWY-Ne-xrG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeX-ga-fyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="371"/>
+        </scene>
+    </scenes>
+</document>
